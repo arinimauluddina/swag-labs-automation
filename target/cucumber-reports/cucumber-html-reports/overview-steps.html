@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Your Project Name</td>
+        <td>1</td>
+      <td>22 Oct 2023, 19:57</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">org.example.step.checkout.CheckoutStep.afterTest()</td>
+              <td>1</td>
+              <td class="duration" data-value="200149500">0.200</td>
+              <td class="duration" data-value="200149500">0.200</td>
+              <td class="duration" data-value="200149500">0.200</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.step.checkout.CheckoutStep.userDoLogin()</td>
+              <td>1</td>
+              <td class="duration" data-value="3909606700">3.909</td>
+              <td class="duration" data-value="3909606700">3.909</td>
+              <td class="duration" data-value="3909606700">3.909</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.step.checkout.CheckoutStep.user_can_back_to_homepage_with_click_the_back_home_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="67050800">0.067</td>
+              <td class="duration" data-value="67050800">0.067</td>
+              <td class="duration" data-value="67050800">0.067</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.step.checkout.CheckoutStep.user_check_the_shopping_list_details_and_click_the_checkout_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="199018000">0.199</td>
+              <td class="duration" data-value="199018000">0.199</td>
+              <td class="duration" data-value="199018000">0.199</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.step.checkout.CheckoutStep.user_click_add_to_cart_button_on_one_the_product_or_more()</td>
+              <td>1</td>
+              <td class="duration" data-value="74394700">0.074</td>
+              <td class="duration" data-value="74394700">0.074</td>
+              <td class="duration" data-value="74394700">0.074</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.step.checkout.CheckoutStep.user_click_cart_icon_on_the_top_right_side()</td>
+              <td>1</td>
+              <td class="duration" data-value="75300000">0.075</td>
+              <td class="duration" data-value="75300000">0.075</td>
+              <td class="duration" data-value="75300000">0.075</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.step.checkout.CheckoutStep.user_double_check_the_shopping_list_and_click_the_finish_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="272440300">0.272</td>
+              <td class="duration" data-value="272440300">0.272</td>
+              <td class="duration" data-value="272440300">0.272</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.step.checkout.CheckoutStep.user_input_the_buyer_s_information_form_and_click_finish_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="351814200">0.351</td>
+              <td class="duration" data-value="351814200">0.351</td>
+              <td class="duration" data-value="351814200">0.351</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.step.checkout.CheckoutStep.user_successfully_purchased_the_product_and_direct_to_checkout_complete_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="69664600">0.069</td>
+              <td class="duration" data-value="69664600">0.069</td>
+              <td class="duration" data-value="69664600">0.069</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.step.detailProduct.DetailProductStep.afterTest()</td>
+              <td>1</td>
+              <td class="duration" data-value="170168000">0.170</td>
+              <td class="duration" data-value="170168000">0.170</td>
+              <td class="duration" data-value="170168000">0.170</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.step.detailProduct.DetailProductStep.number_of_products_in_cart_increases()</td>
+              <td>1</td>
+              <td class="duration" data-value="40207400">0.040</td>
+              <td class="duration" data-value="40207400">0.040</td>
+              <td class="duration" data-value="40207400">0.040</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.step.detailProduct.DetailProductStep.the_product_details_page_displays_the_product_details()</td>
+              <td>1</td>
+              <td class="duration" data-value="82833100">0.082</td>
+              <td class="duration" data-value="82833100">0.082</td>
+              <td class="duration" data-value="82833100">0.082</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.step.detailProduct.DetailProductStep.the_user_can_click_add_to_cart()</td>
+              <td>1</td>
+              <td class="duration" data-value="60600900">0.060</td>
+              <td class="duration" data-value="60600900">0.060</td>
+              <td class="duration" data-value="60600900">0.060</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.step.detailProduct.DetailProductStep.the_user_is_taken_to_a_product_details_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="53858900">0.053</td>
+              <td class="duration" data-value="53858900">0.053</td>
+              <td class="duration" data-value="53858900">0.053</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.step.detailProduct.DetailProductStep.the_user_selects_a_product(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="98715000">0.098</td>
+              <td class="duration" data-value="98715000">0.098</td>
+              <td class="duration" data-value="98715000">0.098</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.step.detailProduct.DetailProductStep.userDoLogin()</td>
+              <td>1</td>
+              <td class="duration" data-value="4510309600">4.510</td>
+              <td class="duration" data-value="4510309600">4.510</td>
+              <td class="duration" data-value="4510309600">4.510</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.step.login.LoginStep.afterTest()</td>
+              <td>2</td>
+              <td class="duration" data-value="217214750">0.217</td>
+              <td class="duration" data-value="217214750">0.239</td>
+              <td class="duration" data-value="434429500">0.434</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.step.login.LoginStep.errorMessageShouldBeDisplayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="43665000">0.043</td>
+              <td class="duration" data-value="43665000">0.043</td>
+              <td class="duration" data-value="43665000">0.043</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.step.login.LoginStep.userInputAsCredentials(java.lang.String,java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="609376100">0.609</td>
+              <td class="duration" data-value="609376100">0.717</td>
+              <td class="duration" data-value="1218752200">1.218</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.step.login.LoginStep.userOnLoginPage()</td>
+              <td>2</td>
+              <td class="duration" data-value="2721886550">2.721</td>
+              <td class="duration" data-value="2721886550">3.656</td>
+              <td class="duration" data-value="5443773100">5.443</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.step.login.LoginStep.userShouldBeRedirectedToTheMainPage()</td>
+              <td>1</td>
+              <td class="duration" data-value="10058000">0.010</td>
+              <td class="duration" data-value="10058000">0.010</td>
+              <td class="duration" data-value="10058000">0.010</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.step.logout.LogoutStep.afterTest()</td>
+              <td>1</td>
+              <td class="duration" data-value="222425300">0.222</td>
+              <td class="duration" data-value="222425300">0.222</td>
+              <td class="duration" data-value="222425300">0.222</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.step.logout.LogoutStep.userDoLogin()</td>
+              <td>1</td>
+              <td class="duration" data-value="3995486800">3.995</td>
+              <td class="duration" data-value="3995486800">3.995</td>
+              <td class="duration" data-value="3995486800">3.995</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.step.logout.LogoutStep.user_click_menu_bar()</td>
+              <td>1</td>
+              <td class="duration" data-value="99896300">0.099</td>
+              <td class="duration" data-value="99896300">0.099</td>
+              <td class="duration" data-value="99896300">0.099</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.step.logout.LogoutStep.user_click_the_logout_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="144611500">0.144</td>
+              <td class="duration" data-value="144611500">0.144</td>
+              <td class="duration" data-value="144611500">0.144</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.example.step.logout.LogoutStep.user_should_be_logged_out()</td>
+              <td>1</td>
+              <td class="duration" data-value="11106900">0.011</td>
+              <td class="duration" data-value="11106900">0.011</td>
+              <td class="duration" data-value="11106900">0.011</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>26</td>
+            <td>29</td>
+            <td class="duration">0.753</td>
+            <td class="duration">5.443</td>
+            <td class="duration">21.860</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
